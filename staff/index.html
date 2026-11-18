@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUBYTZ - Staff Directory & Digital Business Cards</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="icon" type="image/png" href="/staff/images/favicon.png">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+    <link rel="stylesheet" href="style.css?v=6001">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .directory-wrap {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+        .directory-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+        .directory-header .brand-logo {
+            max-width: 280px;
+            margin: 0 auto 1.5rem auto;
+            display: inline-block;
+        }
+        .directory-header h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #FFFFFF;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+        }
+        .directory-header p {
+            color: #94a3b8;
+            font-size: 1.15rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .staff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            align-items: stretch;
+        }
+        .staff-card {
+            background: rgba(4, 14, 30, 0.78);
+            border: 1px solid rgba(0, 102, 255, 0.25);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 25px rgba(0, 102, 255, 0.12);
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            text-decoration: none;
+            color: inherit;
+        }
+        .staff-card:hover {
+            transform: translateY(-6px);
+            border-color: #38bdf8;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 0 0 35px rgba(0, 102, 255, 0.35);
+        }
+        .staff-avatar-wrap {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2.5px solid rgba(56, 189, 248, 0.6);
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 102, 255, 0.25);
+            background: #0b1a30;
+        }
+        .staff-avatar-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 15%;
+            transition: transform 0.4s ease;
+        }
+        .staff-card:hover .staff-avatar-wrap img {
+            transform: scale(1.08);
+        }
+        .staff-name {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-bottom: 0.35rem;
+        }
+        .staff-title {
+            color: #38bdf8;
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            margin-bottom: 1.25rem;
+        }
+        .staff-info-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.65rem;
+            width: 100%;
+            margin-bottom: 1.75rem;
+            font-size: 0.95rem;
+            color: #cbd5e1;
+        }
+        .staff-info-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        .staff-info-item i {
+            color: #0066ff;
+            font-size: 0.9rem;
+        }
+        .btn-view-card {
+            margin-top: auto;
+            width: 100%;
+            padding: 0.85rem 1.5rem;
+            background: linear-gradient(135deg, #004ecc, #0066ff);
+            color: #FFFFFF;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 102, 255, 0.3);
+        }
+        .staff-card:hover .btn-view-card {
+            background: linear-gradient(135deg, #0033aa, #38bdf8);
+            box-shadow: 0 6px 20px rgba(56, 189, 248, 0.4);
+            transform: translateY(-2px);
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #94a3b8;
+            text-decoration: none;
+            margin-top: 3rem;
+            font-size: 0.95rem;
+            transition: color 0.25s ease;
+        }
+        .back-link:hover {
+            color: #38bdf8;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-mesh"></div>
+    <div class="bg-orb-1"></div>
+    <div class="bg-orb-2"></div>
+    <div class="bg-curve"></div>
+    <div class="bg-curve-secondary"></div>
+
+    <div class="directory-wrap">
+        <header class="directory-header">
+            <a href="../index.html">
+                <img src="images/LogoW.webp" alt="QUBYTZ" class="brand-logo" onerror="this.src='images/LogoW.png'">
+            </a>
+            <h1>Our Team</h1>
+            <p>Digital Business Cards & Professional Contacts at QUBYTZ</p>
+        </header>
+
+        <div class="staff-grid">
+            <!-- Mohammed Nawas -->
+            <a href="Nawas.html" class="staff-card">
+                <div class="staff-avatar-wrap">
+                    <img src="images/Nawas.webp" alt="Mohammed Nawas" onerror="this.src='images/Nawas.png'">
+                </div>
+                <div class="staff-name">Mohammed Nawas</div>
+                <div class="staff-title">Co Founder & Director</div>
+                <div class="staff-info-list">
+                    <div class="staff-info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+965 5015 2033</span>
+                    </div>
+                    <div class="staff-info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>nawas@qubytz.com</span>
+                    </div>
+                    <div class="staff-info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Kuwait City, Kuwait</span>
+                    </div>
+                </div>
+                <div class="btn-view-card">
+                    <i class="fas fa-id-card"></i> View Digital Card
+                </div>
+            </a>
+
+            <!-- Nandu P.L.J -->
+            <a href="Nandu.html" class="staff-card">
+                <div class="staff-avatar-wrap">
+                    <img src="images/Nandu.webp" alt="Nandu P.L.J" onerror="this.src='images/Nandu.png'">
+                </div>
+                <div class="staff-name">Nandu P.L.J</div>
+                <div class="staff-title">Co Founder & Director</div>
+                <div class="staff-info-list">
+                    <div class="staff-info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+965 9722 2765</span>
+                    </div>
+                    <div class="staff-info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>nandu@qubytz.com</span>
+                    </div>
+                    <div class="staff-info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Kuwait City, Kuwait</span>
+                    </div>
+                </div>
+                <div class="btn-view-card">
+                    <i class="fas fa-id-card"></i> View Digital Card
+                </div>
+            </a>
+
+            <!-- Mohammed Safwan -->
+            <a href="Safwan.html" class="staff-card">
+                <div class="staff-avatar-wrap">
+                    <img src="images/Safwan.webp" alt="Mohammed Safwan" onerror="this.src='images/Safwan.png'">
+                </div>
+                <div class="staff-name">Mohammed Safwan</div>
+                <div class="staff-title">IT Solutions Consultant</div>
+                <div class="staff-info-list">
+                    <div class="staff-info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+965 9876 1069</span>
+                    </div>
+                    <div class="staff-info-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>support@qubytz.com</span>
+                    </div>
+                    <div class="staff-info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Kuwait City, Kuwait</span>
+                    </div>
+                </div>
+                <div class="btn-view-card">
+                    <i class="fas fa-id-card"></i> View Digital Card
+                </div>
+            </a>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="../index.html" class="back-link">
+                <i class="fas fa-arrow-left"></i> Back to Main Website
+            </a>
+        </div>
+    </div>
+</body>
+</html>

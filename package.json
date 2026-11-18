@@ -1,0 +1,16 @@
+{
+  "name": "nfc-card-pages",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "scan": "node scripts/scan-clients.js",
+    "dev": "node scripts/scan-clients.js && vite",
+    "build": "node scripts/scan-clients.js && vite build",
+    "preview": "vite preview",
+    "optimize": "python3 scripts/optimize-assets.py"
+  },
+  "devDependencies": {
+    "vite": "^5.2.0"
+  }
+}

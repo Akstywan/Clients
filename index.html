@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUBYTZ | Smart Contactless NFC Cards & Digital Identity</title>
+    <link rel="icon" type="image/webp" href="images/favicon.webp">
+    <link rel="alternate icon" type="image/png" href="favicon.png">
+    
+    <!-- Preload Critical Assets -->
+    <link rel="preload" as="image" href="images/Logo.webp" type="image/webp">
+    <link rel="preload" as="image" href="images/hero-bg.webp" type="image/webp">
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Meshes, Glows & Curves (Matching Qubytz Website) -->
+    <div class="bg-mesh"></div>
+    <div class="bg-orb-1"></div>
+    <div class="bg-orb-2"></div>
+    <div class="bg-curve"></div>
+    <div class="bg-curve-secondary"></div>
+
+    <!-- Fixed Header / Navbar -->
+    <header class="navbar">
+        <div class="container">
+            <a href="#" class="navbar-brand" title="QUBYTZ INTEGRATED COMPUTER SOLUTIONS COMPANY">
+                <img src="images/Logo.webp" 
+                     data-logo-default="images/Logo.webp" 
+                     data-logo-white="images/LogoW.webp" 
+                     id="brand-logo" 
+                     alt="QUBYTZ" 
+                     class="brand-logo" 
+                     width="145" 
+                     height="48">
+            </a>
+            
+            <nav class="navbar-nav">
+                <a href="#hero" class="nav-item active">Home</a>
+                <a href="#about" class="nav-item">About</a>
+                <a href="#features" class="nav-item">Features</a>
+                <a href="#clients" class="nav-item">Our Clients</a>
+                <a href="#customizer" class="nav-item">Customize Card</a>
+                <a href="#contact" class="nav-item">Contact</a>
+            </nav>
+            
+            <div class="navbar-actions">
+                <a href="https://wa.me/96522204656?text=Hello%20Qubytz,%20I%20would%20like%20to%20customize%20my%20NFC%20Card%20today!" class="btn-nav" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-whatsapp"></i> Chat: 22204656
+                </a>
+                
+                <!-- Dark / Light Mode Toggle -->
+                <button id="theme-toggle" aria-label="Toggle Dark Mode" title="Toggle theme">
+                    <svg id="theme-icon-light" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="theme-icon-dark" style="display: none;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+
+                <!-- Mobile Hamburger Toggle -->
+                <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Open Navigation Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-menu-drawer" id="mobileDrawer">
+        <a href="#hero" class="nav-item mobile-link">Home</a>
+        <a href="#about" class="nav-item mobile-link">About</a>
+        <a href="#features" class="nav-item mobile-link">Features</a>
+        <a href="#clients" class="nav-item mobile-link">Our Clients</a>
+        <a href="#customizer" class="nav-item mobile-link">Customize Card</a>
+        <a href="#contact" class="nav-item mobile-link">Contact</a>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <!-- Aurora Blurs -->
+            <div class="hero-blur-blob blob-1"></div>
+            <div class="hero-blur-blob blob-2"></div>
+            
+            <div class="container hero-grid">
+                <!-- Left: Hero Messaging -->
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-dot"></span>
+                        <span>Next-Gen Contactless NFC Identity &bull; Kuwait</span>
+                    </div>
+                    
+                    <h1 class="h1">
+                        <span class="gradient-text">QUBYTZ</span>
+                        <span class="hero-subtext">SMART NFC BUSINESS IDENTITY</span>
+                    </h1>
+                    
+                    <h2 class="h2-subtitle">Elevate Your Corporate Presence with Bespoke Digital Cards</h2>
+                    
+                    <p class="hero-description">
+                        Innovating digital connectivity in Kuwait. Seamlessly share your complete contact credentials, corporate profile, portfolio, and social profiles with a single tap on any iPhone or Android smartphone — zero apps required.
+                    </p>
+                    
+                    <div class="hero-actions">
+                        <a href="#customizer" class="btn-pill">
+                            <i class="fas fa-sliders-h"></i> Customize Your Card
+                        </a>
+                        <a href="#clients" class="btn-pill btn-pill-outline">
+                            <i class="fas fa-building"></i> Featured Clients
+                        </a>
+                        <a href="https://wa.me/96522204656?text=Hello%20Qubytz,%20I%20would%20like%20to%20customize%20my%20NFC%20Card%20today!" class="btn-pill btn-pill-whatsapp" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp"></i> WhatsApp Order
+                        </a>
+                    </div>
+                    
+                    <div class="trust-pills">
+                        <div class="trust-pill"><i class="fas fa-bolt"></i> Instant Tap & Share</div>
+                        <div class="trust-pill"><i class="fas fa-shield-alt"></i> iOS & Android Compatible</div>
+                        <div class="trust-pill"><i class="fas fa-cloud-arrow-up"></i> Cloud-Updatable Profiles</div>
+                    </div>
+                </div>
+
+                <!-- Right: Interactive 3D Card Showcase -->
+                <div class="card-preview-wrapper">
+                    <div class="nfc-card-3d" id="nfcCard" onclick="document.getElementById('customizer').scrollIntoView({behavior: 'smooth'})" title="Click to customize card">
+                        <div class="nfc-card-top">
+                            <div class="card-brand-display">
+                                <picture>
+                                    <source srcset="images/LogoW.webp" type="image/webp">
+                                    <img src="images/LogoW.webp" alt="Qubytz" class="card-brand-img" width="105" height="32">
+                                </picture>
+                            </div>
+                            <div class="card-nfc-indicator" title="Contactless NFC Chip">
+                                <i class="fas fa-wifi fa-rotate-90"></i>
+                            </div>
+                        </div>
+
+                        <div class="card-chip"></div>
+
+                        <div class="nfc-card-bottom">
+                            <div class="card-preview-name" id="previewName">YOUR NAME</div>
+                            <div class="card-preview-title" id="previewTitle">MANAGING DIRECTOR</div>
+                            <div class="card-preview-company" id="previewCompany">QUBYTZ INTEGRATED SOLUTIONS</div>
+                        </div>
+                    </div>
+
+                    <div class="card-controls-hint">
+                        <i class="fas fa-hand-pointer"></i> Move cursor over card to tilt &bull; Type below to customize in real time
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Company Overview Section (Matching Qubytz Website Home.js) -->
+        <section class="section" id="about" style="padding-top: 40px; padding-bottom: 40px;">
+            <div class="container">
+                <div class="grid-2">
+                    <!-- About Company Card -->
+                    <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
+                        <div>
+                            <div style="display: inline-block; padding: 6px 14px; border-radius: 9999px; background: rgba(0, 102, 255, 0.12); color: var(--apple-blue); font-size: 13px; font-weight: 700; margin-bottom: 20px;">
+                                Who We Are
+                            </div>
+                            <h2 class="h2" style="font-size: 30px; margin-bottom: 16px;">
+                                Your Trusted IT Partner in Kuwait
+                            </h2>
+                            <p class="text-secondary" style="font-size: 15px; line-height: 1.7; margin-bottom: 16px;">
+                                <strong>QUBYTZ INTEGRATED COMPUTER SOLUTIONS COMPANY</strong> is an established Information Technology company headquartered in Kuwait. We specialize in architecting, developing, and deploying robust computer solutions, enterprise digital platforms, and smart contactless NFC hardware integrations.
+                            </p>
+                            <p class="text-secondary" style="font-size: 15px; line-height: 1.7;">
+                                From enterprise software engineering to modern business identity cards, our dedicated engineering team delivers high-performance technology tailored to regional and international standards.
+                            </p>
+                        </div>
+                        <div style="margin-top: 28px;">
+                            <a href="#customizer" class="btn-pill" style="padding: 10px 24px; font-size: 14px;">
+                                Customize Your NFC Card &rarr;
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Company Office & Details Card -->
+                    <div class="card" style="display: flex; flex-direction: column; justify-content: space-between;">
+                        <div>
+                            <div style="display: inline-block; padding: 6px 14px; border-radius: 9999px; background: rgba(0, 102, 255, 0.12); color: var(--apple-blue); font-size: 13px; font-weight: 700; margin-bottom: 20px;">
+                                Company Details
+                            </div>
+                            <h2 class="h2" style="font-size: 30px; margin-bottom: 20px;">
+                                Office & Contact
+                            </h2>
+                            <div style="display: flex; flex-direction: column; gap: 18px;">
+                                <div style="display: flex; gap: 16px; align-items: flex-start;">
+                                    <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(0, 102, 255, 0.12); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--apple-blue);">
+                                        <i class="fas fa-location-dot" style="font-size: 1.15rem;"></i>
+                                    </div>
+                                    <div>
+                                        <h4 style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 2px;">Headquarters Location</h4>
+                                        <p class="text-secondary" style="font-size: 14px;">Fahaheel, State of Kuwait</p>
+                                    </div>
+                                </div>
+
+                                <div style="display: flex; gap: 16px; align-items: flex-start;">
+                                    <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(0, 102, 255, 0.12); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--apple-blue);">
+                                        <i class="fas fa-phone" style="font-size: 1.1rem;"></i>
+                                    </div>
+                                    <div>
+                                        <h4 style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 2px;">Telephone / WhatsApp</h4>
+                                        <p class="text-secondary" style="font-size: 14px;">+965 22204656</p>
+                                    </div>
+                                </div>
+
+                                <div style="display: flex; gap: 16px; align-items: flex-start;">
+                                    <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(0, 102, 255, 0.12); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--apple-blue);">
+                                        <i class="fas fa-envelope" style="font-size: 1.1rem;"></i>
+                                    </div>
+                                    <div>
+                                        <h4 style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 2px;">Email Inquiries</h4>
+                                        <p class="text-secondary" style="font-size: 14px;">info@qubytz.com</p>
+                                    </div>
+                                </div>
+
+                                <div style="display: flex; gap: 16px; align-items: flex-start;">
+                                    <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(0, 102, 255, 0.12); display: flex; align-items: center; justify-content: center; flex-shrink: 0; color: var(--apple-blue);">
+                                        <i class="fas fa-globe" style="font-size: 1.1rem;"></i>
+                                    </div>
+                                    <div>
+                                        <h4 style="font-size: 15px; font-weight: 600; color: var(--text-primary); margin-bottom: 2px;">Official Website</h4>
+                                        <p class="text-secondary" style="font-size: 14px;">www.qubytz.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="margin-top: 28px;">
+                            <a href="https://wa.me/96522204656" class="btn-pill btn-pill-whatsapp" style="padding: 10px 24px; font-size: 14px;" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-whatsapp"></i> Chat with Qubytz &rarr;
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features-section" id="features">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-subtitle">Why Choose Qubytz NFC Cards</div>
+                    <h2 class="section-title">The Future of Modern Networking</h2>
+                    <p class="section-desc">Say goodbye to outdated paper business cards. Make a lasting first impression with seamless contactless digital sharing.</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon-box">
+                            <i class="fas fa-mobile-screen"></i>
+                        </div>
+                        <h3>Instant Tap & Connect</h3>
+                        <p>Simply tap the card on any modern iPhone or Android device. Your full profile and vCard open instantly in their browser without installing any app.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon-box">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3>Bespoke Custom Branding</h3>
+                        <p>Personalized with your official company logo, corporate colors, name, and designation for an elite, high-impact executive presentation.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon-box">
+                            <i class="fas fa-cloud-arrow-up"></i>
+                        </div>
+                        <h3>Dynamic Profile Updates</h3>
+                        <p>Change your phone number, email address, designation, or website anytime in the cloud. Your card always stays updated without re-printing.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon-box">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>Eco-Friendly & Sustainable</h3>
+                        <p>One durable smart card replaces thousands of wasteful paper cards. Save printing costs and protect the environment while staying technologically ahead.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Clients Section -->
+        <section class="samples-section" id="clients">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-subtitle">Our Valued Clients</div>
+                    <h2 class="section-title">Trusted by Leading Organizations</h2>
+                    <p class="section-desc">Discover our featured corporate clients and institutions equipped with Qubytz Next-Gen Contactless NFC Business Cards.</p>
+                </div>
+
+                <div class="samples-grid">
+                    <!-- Al Faisal Educational Est. (Educational Establishment) -->
+                    <div class="sample-card client-card">
+                        <div class="sample-card-header">
+                        <div class="client-card-logo">
+                            <picture>
+                                <source srcset="/AlFaisal/images/AlFaisal_logo.webp" type="image/webp">
+                                <img src="/AlFaisal/images/AlFaisal_logo.png" alt="Al Faisal Educational Est. Logo" class="client-logo-img" loading="lazy">
+                            </picture>
+                        </div>
+                            <span class="sample-brand-tag" style="background: rgba(239, 68, 68, 0.15); color: #ef4444; border-color: rgba(239, 68, 68, 0.35);">
+                                <i class="fas fa-school"></i> Educational Establishment
+                            </span>
+                        </div>
+                        <h3>Al Faisal Educational Est.</h3>
+                        <div class="sample-role">Private Educational Institutions & Schools</div>
+                        <p>Prominent educational establishment in Kuwait overseeing premier private academic institutions, curriculum excellence, and educational leadership.</p>
+                    </div>
+
+                    <!-- Bukhamseen Aviation (Aviation & Travel) -->
+                    <div class="sample-card client-card">
+                        <div class="sample-card-header">
+                        <div class="client-card-logo">
+                            <picture>
+                                <source srcset="/Bukhamseen/images/Bukhamseen_logo.webp" type="image/webp">
+                                <img src="/Bukhamseen/images/Bukhamseen_logo.png" alt="Bukhamseen Aviation Logo" class="client-logo-img" loading="lazy">
+                            </picture>
+                        </div>
+                            <span class="sample-brand-tag" style="background: rgba(234, 179, 8, 0.15); color: #eab308; border-color: rgba(234, 179, 8, 0.35);">
+                                <i class="fas fa-plane-up"></i> Aviation & Travel
+                            </span>
+                        </div>
+                        <h3>Bukhamseen Aviation</h3>
+                        <div class="sample-role">Aviation, Airline GSA & Travel Group</div>
+                        <p>Leading aviation and travel group in Kuwait specializing in international airline representation (GSA), corporate travel management, and air cargo logistics.</p>
+                    </div>
+
+                    <!-- Como Travel & Tourism (Travel & Tourism) -->
+                    <div class="sample-card client-card">
+                        <div class="sample-card-header">
+                        <div class="client-card-logo">
+                            <picture>
+                                <source srcset="/Como/images/Como_logo.webp" type="image/webp">
+                                <img src="/Como/images/Como_logo.png" alt="Como Travel & Tourism Logo" class="client-logo-img" loading="lazy">
+                            </picture>
+                        </div>
+                            <span class="sample-brand-tag" style="background: rgba(16, 185, 129, 0.15); color: #10b981; border-color: rgba(16, 185, 129, 0.35);">
+                                <i class="fas fa-plane-departure"></i> Travel & Tourism
+                            </span>
+                        </div>
+                        <h3>Como Travel & Tourism</h3>
+                        <div class="sample-role">Premier IATA Travel Agency</div>
+                        <p>Accredited IATA travel and tourism agency in Kuwait, offering corporate travel management, flight reservations, and customized holiday packages.</p>
+                    </div>
+
+                    <!-- New Gulf Indian School (Education) -->
+                    <div class="sample-card client-card">
+                        <div class="sample-card-header">
+                        <div class="client-card-logo">
+                            <picture>
+                                <source srcset="/GulfIndianSchool/images/Gis_logo.webp" type="image/webp">
+                                <img src="/GulfIndianSchool/images/Gis_logo.png" alt="New Gulf Indian School Logo" class="client-logo-img" loading="lazy">
+                            </picture>
+                        </div>
+                            <span class="sample-brand-tag" style="background: rgba(22, 163, 74, 0.15); color: #4ade80; border-color: rgba(22, 163, 74, 0.35);">
+                                <i class="fas fa-graduation-cap"></i> Education
+                            </span>
+                        </div>
+                        <h3>New Gulf Indian School</h3>
+                        <div class="sample-role">Private CBSE Educational Institution</div>
+                        <p>Leading educational institution in Kuwait delivering academic distinction, ethical leadership, and transformative CBSE education.</p>
+                    </div>
+
+                    <!-- Q'go Group (Aviation & Travel) -->
+                    <div class="sample-card client-card">
+                        <div class="sample-card-header">
+                        <div class="client-card-logo">
+                            <picture>
+                                <source srcset="/Qgo/images/Qgo_logo.webp" type="image/webp">
+                                <img src="/Qgo/images/Qgo_logo.png" alt="Q'go Group Logo" class="client-logo-img" loading="lazy">
+                            </picture>
+                        </div>
+                            <span class="sample-brand-tag" style="background: rgba(0, 99, 166, 0.15); color: #0063a6; border-color: rgba(0, 99, 166, 0.35);">
+                                <i class="fas fa-plane-departure"></i> Aviation & Travel
+                            </span>
+                        </div>
+                        <h3>Q'go Group</h3>
+                        <div class="sample-role">Aviation, Travel, Cargo & Logistics Group</div>
+                        <p>Leading travel, aviation, cargo logistics, and corporate services group in Kuwait operating premier OTA platforms, airline representation, and global logistics solutions.</p>
+                    </div>
+
+                    <!-- Travelport (Travelport Partner) -->
+                    <div class="sample-card client-card">
+                        <div class="sample-card-header">
+                        <div class="client-card-logo">
+                            <picture>
+                                <source srcset="/Travelport/images/TravelportLogo.webp" type="image/webp">
+                                <img src="/Travelport/images/TravelportLogo.png" alt="Travelport Logo" class="client-logo-img" loading="lazy">
+                            </picture>
+                        </div>
+                            <span class="sample-brand-tag" style="background: rgba(0, 102, 255, 0.15); color: #38bdf8; border-color: rgba(0, 102, 255, 0.35);">
+                                <i class="fas fa-plane"></i> Travelport Partner
+                            </span>
+                        </div>
+                        <h3>Travelport</h3>
+                        <div class="sample-role">Travel Technology Systems Co.</div>
+                        <p>Official Partner of Travelport in Kuwait, providing world-class travel technology systems, corporate distribution, and aviation booking solutions.</p>
+                    </div>
+
+                    <!-- Onflap Technologies (Software & Cloud Solutions) -->
+                    <div class="sample-card client-card">
+                        <div class="sample-card-header">
+                        <div class="client-card-logo">
+                            <picture>
+                                <source srcset="/onflap/images/logo.webp" type="image/webp">
+                                <img src="/onflap/images/logo.png" alt="Onflap Technologies Logo" class="client-logo-img" loading="lazy">
+                            </picture>
+                        </div>
+                            <span class="sample-brand-tag" style="background: rgba(244, 63, 94, 0.15); color: #f43f5e; border-color: rgba(244, 63, 94, 0.35);">
+                                <i class="fas fa-cubes"></i> Software & Cloud Solutions
+                            </span>
+                        </div>
+                        <h3>Onflap Technologies</h3>
+                        <div class="sample-role">Enterprise Software & Cloud Architecture</div>
+                        <p>Global technology partner specializing in scalable enterprise software engineering, cloud architecture, and modern digital transformation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Customizer & WhatsApp Dispatch Section -->
+        <section class="customizer-section" id="customizer">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-subtitle">CARD PERSONALIZATION</div>
+                    <h2 class="section-title">Customize Your Card with Qubytz</h2>
+                    <p class="section-desc">Type your details below to see the 3D card preview update in real time, or message our team directly on WhatsApp for bespoke mockups and immediate quotes.</p>
+                </div>
+
+                <div class="customizer-layout">
+                    <!-- Left: Information & WhatsApp Contact Details -->
+                    <div class="customizer-info">
+                        <div class="hero-badge" style="margin-bottom: 16px;">
+                            <i class="fab fa-whatsapp" style="color: var(--whatsapp); font-size: 1.1rem;"></i>
+                            <span>Direct WhatsApp Ordering</span>
+                        </div>
+                        <h2>Executive NFC Card Personalization</h2>
+                        <p>
+                            Get an elite, contactless business card customized with your full name, official company branding, designation, and color preferences. Fast 24-48 hour turnaround across Kuwait.
+                        </p>
+
+                        <div class="contact-box">
+                            <div class="contact-box-icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="contact-box-text">
+                                <h4>Dedicated WhatsApp Consultant</h4>
+                                <div class="phone-number">+965 22204656</div>
+                            </div>
+                        </div>
+
+                        <div class="features-list">
+                            <div class="features-list-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Free digital profile and contact page hosting included</span>
+                            </div>
+                            <div class="features-list-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Dynamic cloud updating for phone, email, and social links</span>
+                            </div>
+                            <div class="features-list-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>High-durability matte finish with scratch-resistant coating</span>
+                            </div>
+                            <div class="features-list-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Instant offline QR code backup on card reverse</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Live Interactive Form that Redirects to WhatsApp -->
+                    <div class="customizer-form-container">
+                        <form id="whatsappInquiryForm" class="inquiry-form" onsubmit="handleSendWhatsApp(event)">
+                            <div class="form-group">
+                                <label for="inputName">Full Name *</label>
+                                <input type="text" id="inputName" class="form-control" placeholder="e.g. Mohammed Safwan" required oninput="updateCardPreview()">
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="inputTitle">Job Title / Designation *</label>
+                                    <input type="text" id="inputTitle" class="form-control" placeholder="e.g. Managing Director" required oninput="updateCardPreview()">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inputCompany">Company Name *</label>
+                                    <input type="text" id="inputCompany" class="form-control" placeholder="e.g. Qubytz Solutions" required oninput="updateCardPreview()">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="selectQuantity">Card Quantity</label>
+                                <select id="selectQuantity" class="form-control">
+                                    <option value="1 Card (Individual Executive)" selected>1 Card (Individual Executive)</option>
+                                    <option value="2-5 Cards (Executive Tier)">2 - 5 Cards (Executive Tier)</option>
+                                    <option value="6-20 Cards (Corporate Team)">6 - 20 Cards (Corporate Team)</option>
+                                    <option value="20+ Cards (Enterprise Bulk)">20+ Cards (Enterprise Bulk)</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="inputNotes">Special Requests / Custom Notes (Optional)</label>
+                                <textarea id="inputNotes" class="form-control" placeholder="Mention preferred card colors, custom QR code requirements, or logo details..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-submit-whatsapp">
+                                <i class="fab fa-whatsapp" style="font-size: 1.35rem;"></i>
+                                <span>Send WhatsApp Message to 22204656</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Floating WhatsApp Action Button -->
+    <a href="https://wa.me/96522204656?text=Hello%20Qubytz,%20I%20would%20like%20to%20customize%20my%20NFC%20Card%20today!" class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span>Chat with Qubytz</span>
+    </a>
+
+    <!-- Footer (Matching Qubytz Corporate Website Footer) -->
+    <footer id="contact" class="footer">
+        <div class="container grid-3">
+            <div>
+                <img src="images/Logo.webp" 
+                     data-logo-default="images/Logo.webp" 
+                     data-logo-white="images/LogoW.webp" 
+                     id="footer-logo" 
+                     alt="QUBYTZ" 
+                     class="footer-logo" 
+                     width="130" 
+                     height="42">
+                <h3 class="footer-brand">QUBYTZ INTEGRATED COMPUTER SOLUTIONS COMPANY</h3>
+                <p class="text-secondary" style="font-size: 14px; line-height: 1.6;">
+                    Empowering modern business identity and enterprise IT with innovative, flexible, and smart software and contactless digital identity solutions matching international standards.
+                </p>
+            </div>
+            
+            <div>
+                <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 1.25rem; color: var(--text-primary);">Solutions & Identity</h4>
+                <ul class="footer-nav-list">
+                    <li><a href="#hero">Next-Gen NFC Cards</a></li>
+                    <li><a href="#customizer">Customize Digital Card</a></li>
+                    <li><a href="#clients">Featured Corporate Clients</a></li>
+                    <li><a href="#features">Contactless Technology</a></li>
+                    <li><a href="/staff/index.html" style="color: var(--apple-blue); font-weight: 600;">Staff Directory &rarr;</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h4 style="font-size: 16px; font-weight: 700; margin-bottom: 1.25rem; color: var(--text-primary);">Kuwait Headquarters</h4>
+                <ul class="footer-nav-list">
+                    <li class="text-secondary"><i class="fas fa-location-dot" style="margin-right: 8px; color: var(--apple-blue);"></i> Fahaheel, State of Kuwait</li>
+                    <li class="text-secondary"><i class="fas fa-phone" style="margin-right: 8px; color: var(--apple-blue);"></i> Tel: +965 22204656</li>
+                    <li class="text-secondary"><i class="fas fa-envelope" style="margin-right: 8px; color: var(--apple-blue);"></i> info@qubytz.com</li>
+                    <li class="text-secondary"><i class="fas fa-globe" style="margin-right: 8px; color: var(--apple-blue);"></i> www.qubytz.com</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="footer-bottom">
+                <div>
+                    &copy; 2026 QUBYTZ INTEGRATED COMPUTER SOLUTIONS COMPANY. All rights reserved.
+                </div>
+                <div class="footer-contact-links">
+                    <a href="https://wa.me/96522204656" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp"></i> +965 22204656
+                    </a>
+                    <span>&bull;</span>
+                    <a href="mailto:info@qubytz.com">
+                        <i class="fas fa-envelope"></i> info@qubytz.com
+                    </a>
+                    <span>&bull;</span>
+                    <a href="https://www.qubytz.com" target="_blank" rel="noopener noreferrer">
+                        <i class="fas fa-globe"></i> www.qubytz.com
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Theme Toggle Logic (Matches Qubytz Website)
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const iconLight = document.getElementById('theme-icon-light');
+        const iconDark = document.getElementById('theme-icon-dark');
+        const brandLogo = document.getElementById('brand-logo');
+        const footerLogo = document.getElementById('footer-logo');
+
+        function applyTheme(t) {
+            document.documentElement.setAttribute('data-theme', t);
+            localStorage.setItem('theme', t);
+
+            if (t === 'dark') {
+                if (iconLight) iconLight.style.display = 'none';
+                if (iconDark) iconDark.style.display = 'block';
+                if (brandLogo && brandLogo.dataset.logoWhite) brandLogo.src = brandLogo.dataset.logoWhite;
+                if (footerLogo && footerLogo.dataset.logoWhite) footerLogo.src = footerLogo.dataset.logoWhite;
+            } else {
+                if (iconLight) iconLight.style.display = 'block';
+                if (iconDark) iconDark.style.display = 'none';
+                if (brandLogo && brandLogo.dataset.logoDefault) brandLogo.src = brandLogo.dataset.logoDefault;
+                if (footerLogo && footerLogo.dataset.logoDefault) footerLogo.src = footerLogo.dataset.logoDefault;
+            }
+        }
+
+        // Initialize Theme from localStorage or Default to 'light' (matching Qubytz website)
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        applyTheme(savedTheme);
+
+        if (themeToggleBtn) {
+            themeToggleBtn.addEventListener('click', () => {
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                applyTheme(currentTheme === 'dark' ? 'light' : 'dark');
+            });
+        }
+
+        // Mobile Navigation Drawer Toggle
+        const mobileNavToggle = document.getElementById('mobileNavToggle');
+        const mobileDrawer = document.getElementById('mobileDrawer');
+        if (mobileNavToggle && mobileDrawer) {
+            mobileNavToggle.addEventListener('click', () => {
+                mobileDrawer.classList.toggle('open');
+                const isOpen = mobileDrawer.classList.contains('open');
+                mobileNavToggle.innerHTML = isOpen ? '<i class="fas fa-xmark"></i>' : '<i class="fas fa-bars"></i>';
+            });
+
+            document.querySelectorAll('.mobile-link').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileDrawer.classList.remove('open');
+                    mobileNavToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                });
+            });
+        }
+
+        // 3D Card Tilt Effect on Mouse Move
+        const card = document.getElementById('nfcCard');
+        if (card) {
+            const cardWrapper = card.parentElement;
+            cardWrapper.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const rotateX = ((y - centerY) / centerY) * -12;
+                const rotateY = ((x - centerX) / centerX) * 12;
+                
+                card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+            });
+
+            cardWrapper.addEventListener('mouseleave', () => {
+                card.style.transform = 'rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+            });
+        }
+
+        // Real-time card preview updates
+        const previewName = document.getElementById('previewName');
+        const previewTitle = document.getElementById('previewTitle');
+        const previewCompany = document.getElementById('previewCompany');
+
+        function updateCardPreview() {
+            const name = document.getElementById('inputName').value.trim();
+            const title = document.getElementById('inputTitle').value.trim();
+            const company = document.getElementById('inputCompany').value.trim();
+
+            previewName.textContent = name || 'YOUR NAME';
+            previewTitle.textContent = title || 'MANAGING DIRECTOR';
+            previewCompany.textContent = company || 'QUBYTZ INTEGRATED SOLUTIONS';
+        }
+
+        // WhatsApp Form Submission Handler -> Redirects to +965 22204656
+        function handleSendWhatsApp(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('inputName').value.trim();
+            const title = document.getElementById('inputTitle').value.trim();
+            const company = document.getElementById('inputCompany').value.trim();
+            const quantity = document.getElementById('selectQuantity').value;
+            const notes = document.getElementById('inputNotes').value.trim();
+
+            const phoneNumber = '96522204656';
+
+            let message = `*Hello Qubytz! I would like to customize my NFC Business Card.*\n\n`;
+            message += `*Client Details:*\n`;
+            message += `• *Name:* ${name}\n`;
+            message += `• *Title:* ${title}\n`;
+            message += `• *Company:* ${company}\n`;
+            message += `• *Quantity:* ${quantity}\n`;
+            
+            if (notes) {
+                message += `• *Notes/Requests:* ${notes}\n`;
+            }
+            
+            message += `\nPlease share the design mockup and pricing details. Thank you!`;
+
+            const encodedMessage = encodeURIComponent(message);
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Navbar Shadow on Scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (navbar) {
+                if (window.scrollY > 15) {
+                    navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.08)';
+                } else {
+                    navbar.style.boxShadow = 'none';
+                }
+            }
+        });
+    </script>
+</body>
+</html>
